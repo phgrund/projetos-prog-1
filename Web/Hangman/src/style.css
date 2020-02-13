@@ -1,0 +1,114 @@
+button {
+	color: #777;
+	background-color: #EEE;
+	border: 1px #EEE solid;
+}
+button:hover {
+	color: #000;
+	background-color: #DDD;
+	border: 1px #CCC solid;
+}
+ul#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #EEE;
+	border: 1px #DDD solid;
+}
+li {
+	float: left;
+}
+li a {
+	color: #777;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover {
+	background-color: #DDD;
+	color: #000;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+.invisivel {
+	display: none;
+}
+#main {
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 550px;
+	height: 100%;
+	min-height: 810px;
+	border: 1px #CCC solid;
+	background-color: #F5F5F5;
+}
+#logoDiv {
+	background-image: url("../src/logo.jpg");
+	height: 200px;
+	border-bottom: 1px #CCC solid;
+}
+#headerDiv {
+	border-bottom: 1px #CCC solid;
+}
+#bodyDiv {
+	margin: 10px;
+	vertical-align: middle;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#teclado {
+	width: 370px;
+	height: 120px;
+	background-color: #DDD;
+	border: 1px #CCC solid;
+	border-radius: 10px;
+}
+#teclado-cima {
+	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#teclado-meio {
+	margin-bottom: 5px;
+}
+#teclado-baixo {
+	margin-bottom: 10px;
+}
+.teclado {
+	width: 30px !important;
+	height: 30px !important;
+}
+#dicaDiv {
+	margin-top: 5px;
+	border: 1px #606060 solid;
+	border-radius: 10px;
+	background-color: #DCDCDC;
+	padding: 10px;
+}
+#placar {
+	margin-top: 5px;
+}
+#avisoTeclado {
+	margin-top: 5px;
+}
+#img {
+	border: 1px #606060 solid;
+	margin-bottom: 10px;
+}
+.casinhas  {
+	text-decoration: underline;
+}
+#jogarNovamente {
+	margin-top: 5px;
+}
+footer {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}

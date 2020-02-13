@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Calcular Incerteza</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+      <div class="title">
+          <h1>Calcular Incertezas</h1>
+      </div>
+       <div id="resultado">
+           <p id="resultadoText">Resultado: Valor &#177; Incerteza</p>
+       </div>
+        <div id="inputs">
+           <div class="operacoes">
+                <input type="number" id="valor1" class="campo" min="0" placeholder="Valor 1"> 
+                &#177; 
+                <input type="number" id="incerteza1" class="campo" min="0" placeholder="Incerteza 1">
+            </div>
+            <div class="operacoes">
+                <input type="number" id="valor2" class="campo" min="0" placeholder="Valor 2"> 
+                &#177; 
+                <input type="number" id="incerteza2" class="campo" min="0" placeholder="Incerteza 2">
+            </div>
+            <div>
+                <select id="operacao">
+                    <option value="soma">Soma</option>
+                    <option value="subtracao">Subtração</option>
+                    <option value="multiplicacao">Multiplicação</option>
+                    <option value="divisao">Divisão</option>
+                </select>
+                <input type="checkbox" id="selecionarPI"> PI
+            </div>
+        </div>
+        <button id="calcular">Calcular</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

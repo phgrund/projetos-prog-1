@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jogo da Forca</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="src/forca.js"></script>
+	<script type="text/javascript" src="src/mostrar.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<meta name="viewport" content="width=570, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+<body>
+	<div id="primary">
+		<div id="main">
+			<div id="logoDiv"></div>
+			<div id="headerDiv">
+				<ul id="navbar">
+					<li id="liJogar" style="background-color: #CCC;"><a href="javascript:mostrarJogar();" id="jogoNavbar">Jogar</a></li>
+					<li id="liTutorial"><a href="javascript:mostrarTutorial();" id"tutorialNavbar">Tutorial</a></li>
+				</ul>
+
+			</div>
+			<div id="bodyDiv">
+				<article id="jogar">
+					<div id="bonecos" class="text-center">
+						<img src="src/boneco/0.png" id="img" alt="Boneco">
+					</div>
+					<div id="teclado" class="center">
+						<div id="teclado-cima" class="text-center">
+							<button class="teclado" id="Q" name="nameTeclado" onClick="forca(this.id);">Q</button>
+							<button class="teclado" id="W" name="nameTeclado" onClick="forca(this.id);">W</button>
+							<button class="teclado" id="E" name="nameTeclado" onClick="forca(this.id);">E</button>
+							<button class="teclado" id="R" name="nameTeclado" onClick="forca(this.id);">R</button>
+							<button class="teclado" id="T" name="nameTeclado" onClick="forca(this.id);">T</button>
+							<button class="teclado" id="Y" name="nameTeclado" onClick="forca(this.id);">Y</button>
+							<button class="teclado" id="U" name="nameTeclado" onClick="forca(this.id);">U</button>
+							<button class="teclado" id="I" name="nameTeclado" onClick="forca(this.id);">I</button>
+							<button class="teclado" id="O" name="nameTeclado" onClick="forca(this.id);">O</button>
+							<button class="teclado" id="P" name="nameTeclado" onClick="forca(this.id);">P</button>
+						</div>
+						<div id="teclado-meio" class="text-center">
+							<button class="teclado" id="A" name="nameTeclado" onClick="forca(this.id);">A</button>
+							<button class="teclado" id="S" name="nameTeclado" onClick="forca(this.id);">S</button>
+							<button class="teclado" id="D" name="nameTeclado" onClick="forca(this.id);">D</button>
+							<button class="teclado" id="F" name="nameTeclado" onClick="forca(this.id);">F</button>
+							<button class="teclado" id="G" name="nameTeclado" onClick="forca(this.id);">G</button>
+							<button class="teclado" id="H" name="nameTeclado" onClick="forca(this.id);">H</button>
+							<button class="teclado" id="J" name="nameTeclado" onClick="forca(this.id);">J</button>
+							<button class="teclado" id="K" name="nameTeclado" onClick="forca(this.id);">K</button>
+							<button class="teclado" id="L" name="nameTeclado" onClick="forca(this.id);">L</button>
+						</div>
+						<div id="teclado-baixo" class="text-center">
+							<button class="teclado" id="Z" onClick="forca(this.id);">Z</button>
+							<button class="teclado" id="X" name="nameTeclado" onClick="forca(this.id);">X</button>
+							<button class="teclado" id="C" name="nameTeclado" onClick="forca(this.id);">C</button>
+							<button class="teclado" id="V" name="nameTeclado" onClick="forca(this.id);">V</button>
+							<button class="teclado" id="B" name="nameTeclado" onClick="forca(this.id);">B</button>
+							<button class="teclado" id="N" name="nameTeclado" onClick="forca(this.id);">N</button>
+							<button class="teclado" id="M" name="nameTeclado" onClick="forca(this.id);">M</button>
+						</div>
+					</div>
+					<div id="resultado" class="text-center">
+						<span id="casinha0" class="casinhas" style="display: none;">_</span>
+						<span id="casinha1" class="casinhas" style="display: none;">_</span>
+						<span id="casinha2" class="casinhas" style="display: none;">_</span>
+						<span id="casinha3" class="casinhas" style="display: none;">_</span>
+						<span id="casinha4" class="casinhas" style="display: none;">_</span>
+						<span id="casinha5" class="casinhas" style="display: none;">_</span>
+						<span id="casinha6" class="casinhas" style="display: none;">_</span>
+						<span id="casinha7" class="casinhas" style="display: none;">_</span>
+						<span id="casinha8" class="casinhas" style="display: none;">_</span>
+						<span id="casinha9" class="casinhas" style="display: none;">_</span>
+					</div>
+					<div class="text-center">
+						Letras jogadas: <span id="letrasJogadas"></span>
+					</div>
+					<button id="jogarNovamente" class="center" style="display: none;" onClick="window.location.reload(false);">Jogar Novamente</button>
+					<p id="avisoTeclado" class="text-center">Clique em alguma tecla do teclado para começar.<br>Tentativas restantes: 6</p><p id="placar" class="text-center" style="display: none;">Você jogou <span id="lastLetra"></span> e <span id="lastResult"></span>.<br>Tentativas Restante: <span id="tentativasRestantes"></span></p>
+					<div id="dicaDiv" class="text-center">
+						<p id="pDica1" style="display: inline;">Dica 1: <span id="mostrarDica1"><a href="javascript:gerarDica(1);">mostrar dica</a></span>.</p><br>
+						<p id="pDica2" style="display: inline;">Dica 2: <span id="mostrarDica2"><a href="javascript:gerarDica(2);">mostrar dica</a></span>.</p><br>
+					</div>
+				</article>
+				<article id="tutorial" style="display: none;">
+					<p>Nesse tópico, você aprenderá como jogar o Jogo da Forca.</p>
+					<p>Para jogar é muito simples. Basta clicar em alguma letra do teclado para chutar essa letra.</p>
+					<p>Caso você acerte a letra, ela irá aparecer na palavra parcial abaixo à imagem. Caso você erre, você perderá uma tentativa (são 6 no total). Ao acabar todas as tentativas, o jogo finalizará.</p>
+					<p>Algumas palavras tem acento (como ônibus), porém acentos não são contados, apenas escrever "onibus" funcionará.</p>
+					<p>Você ganhará o jogo ao acertar todas as letras da palavra secreta. Para auxiliar, são disponibilizadas 2 dicas abaixo do teclado.</p>
+					<p style="font-weight: bold;">Boa sorte!</p>
+				</article>
+			</div>
+		</div>
+	</div>
+</body>
+<footer align="center">
+	Images, texts and codes made by Paulo Henrique Rodrigues Grund<br>
+	Copyright &copy 2018
+</footer>
+</html>

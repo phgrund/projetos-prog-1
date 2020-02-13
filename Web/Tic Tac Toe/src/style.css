@@ -1,0 +1,85 @@
+button {
+	color: #777;
+	background-color: #EEE;
+	border: 1px #CCC solid;
+}
+button:hover {
+	color: #000;
+	background-color: #DDD;
+	border: 1px #777 solid;
+}
+ul#navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #EEE;
+	border: 1px #DDD solid;
+}
+li {
+	float: left;
+}
+li a {
+	color: #777;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover {
+	background-color: #DDD;
+	color: #000;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+#main {
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 550px;
+	height: 100%;
+	min-height: 820px;
+	border: 1px #CCC solid;
+	background-color: #F5F5F5;
+}
+#logoDiv {
+	background-image: url("../src/logo.png");
+	height: 200px;
+	border-bottom: 1px #CCC solid;
+}
+#headerDiv {
+	border-bottom: 1px #CCC solid;
+}
+#bodyDiv {
+	margin: 10px;
+}
+#q{
+    width: 246px;
+    height: 246px;
+	display: flex;
+	margin: 0 auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.quadrado{
+    width: 80px;
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 80px;
+	border: 1px solid #777;
+}
+.quadrado:hover {
+	background-color: #DDD;
+}
+footer {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+#alerta {
+	color: #FF7B00;
+}

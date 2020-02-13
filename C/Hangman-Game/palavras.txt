@@ -1,0 +1,11 @@
+5
+CARRO
+Meio de locomoção
+AZUL
+Cor
+BANANA
+Fruta
+OLA
+Saudação
+CACHORRO
+Animal

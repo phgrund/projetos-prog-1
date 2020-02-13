@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>じゃんけんぽん</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="site">
+        <div class="header">
+            <img src="imgs/jokenpo.jpg" alt="Imagem Cabeçalho">
+        </div>
+        <div class="resultado">
+            <div class="left" align="center" valign="center">
+                <p>Seu Placar: <span id="placarPlayer">0</span> pontos</p>
+            </div>
+            <div class="right" align="center">
+                <p>Placar IA: <span id="placarIA">0</span> pontos</p>
+            </div>
+        </div>
+        <div class="jogo">
+            Escolha sua opção:<br>
+            <div class="btn-group">
+                <button class="btn btn-danger" id="pedra" value="0" onClick="selecao(this.value)">Pedra</button>
+                <button class="btn btn-danger" id="papel" value="1" onClick="selecao(this.value)">Papel</button>
+                <button class="btn btn-danger" id="tesoura" value="2" onClick="selecao(this.value)">Tesoura</button>
+            </div>
+            <button class="btn btn-success" onClick="jogar()">Jogar</button><br><br>
+            Último vencedor: <span id="lastWinner">---</span >
+        </div>
+    </div>
+</body>
+<footer class="text-center">
+    <p id="creditos">Made by Paulo Henrique Rodrigues Grund<br>
+        Copyright &copy 2018</p>
+</footer>
+</html>

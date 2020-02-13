@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    padding-right: auto;
+    padding-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+body{
+	background-color: #EEE;
+}
+td{
+	padding: 10px 5px 10px 5px;
+}
+.inputSize{
+	width: 120px;
+}

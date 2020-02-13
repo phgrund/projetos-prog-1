@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jogo da Velha</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="src/tictactoe.js"></script>
+	<script type="text/javascript" src="src/mostrar.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<meta name="viewport" content="width=570, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="main">
+		<div id="logoDiv"></div>
+		<div id="headerDiv">
+			<ul id="navbar">
+				<li id="liJogar" style="background-color: #CCC;"><a href="javascript:mostrarJogar();" id="jogoNavbar">Jogar</a></li>
+				<li id="liTutorial"><a href="javascript:mostrarTutorial();" id"tutorialNavbar">Tutorial</a></li>
+			</ul>
+
+		</div>
+		<div id="bodyDiv">
+			<article id="jogar" class="text-center">
+				<div id="selecaoModo" class="text-center">
+					<p>Escolha o seu modo de jogo:</p>
+					<select id="escolhaModo">
+						<option value="1">Player vs IA</option>
+						<option value="2">Player vs Player</option>
+					</select>
+					<button id="comecarJogo" onClick="escolhaModo()">Jogar</button><br>
+					Mostrar alerta ao fim de cada rodada <input type="checkbox" id="mostrarAlert" checked>
+				</div>
+				<div id="escolhaSingle" style="display: none;">
+					<p>Nome Player: <input type="text" id="nomePlayer" placeholder="Digite seu nome aqui."></p>
+					<button id="comecar" onClick="escolhaNome();">Começar</button>
+				</div>
+				<div id="escolhaDuo" style="display: none;">
+					<p>
+						Nome Player 1: <input type="text" id="nomePlayer1" placeholder="Digite seu nome aqui."><br>
+						Nome Player 2: <input type="text" id="nomePlayer2" placeholder="Digite seu nome aqui.">
+					</p>
+					<button id="comecar" onClick="escolhaNome();">Começar</button>
+				</div>
+				<div id="jogo" style="display: none;">
+					<p id="placar" class="text-center">
+						<b>Placar:</b><br><b>[X]</b> <u><span id="jogador1"></span></u> <span id="placarJogador1">0</span>
+						 vs
+						<span id="placarJogador2">0</span> <u><span id="jogador2"></span></u> <b>[O]</b><br>
+						Empates: <span id="placarEmpates">0</span><br>
+						Vez de <u><span id="vezJogada"></span></u> <b>[<span id="vezJogadaXO"></span>]</b> jogar.
+					</p>
+					<div id="q" class="text-center">
+						<div id="q0" class="quadrado" onClick="jogar(0);"></div>
+						<div id="q1" class="quadrado" onClick="jogar(1);"></div>
+						<div id="q2" class="quadrado" onClick="jogar(2);"></div>
+						<div id="q3" class="quadrado" onClick="jogar(3);"></div>
+						<div id="q4" class="quadrado" onClick="jogar(4);"></div>
+						<div id="q5" class="quadrado" onClick="jogar(5);"></div>
+						<div id="q6" class="quadrado" onClick="jogar(6);"></div>
+						<div id="q7" class="quadrado" onClick="jogar(7);"></div>
+						<div id="q8" class="quadrado" onClick="jogar(8);"></div>
+					</div>
+					<p id="alerta" class="text-center" style="display: none;"><i class="fa fa-exclamation-triangle"></i> Posição ocupada, tente outra!</p>
+					<button id="jogarNovamente" onClick="novoJogo();" style="display: none;">Jogar Novamente</button>
+				</div>
+				</article>
+			<article id="tutorial" style="display: none;">
+				<p>Nesse tópico, você aprenderá como jogar o Jogo da Velha.</p>
+				<p>Para jogar é muito simples. Para começar você deverá escolhar o modo de jogo que deseja jogar. São 2 modos de jogo, sendo eles:</p>
+				<p>O primeiro deles é 'Player vs IA', onde você jogará contra o próprio computador.</p>
+				<p>O segundo deles é 'Player vs Player", onde você jogará contra um amigo usando o mesmo computador que você, em turnos alternados</p>
+				<p>Em ambos os modos, o a pessoa que começará jogando é aleatório, então não há uma vantagem definida de começo!</p>
+				<p>Para vencer, você deverá marcar 3 pontos seguidos nas posições abaixo:</p>
+				<img src="src/tutorial.png" id="imgTuto" alt="Tutorial de como vencer">
+				<p>
+					As cores indicam diferentes jogadas. O roxo é a mistura de vermelho e azul. Todas as jogadas devem ter os 3 em sequência. O mesmo vale para a bolinha.<br>
+					O primeiro quadrado mostra as possibilidades horizontais.<br>
+					O segundo quadrado mostra as possibilidades verticais.<br>
+					O terceiro quadrado mostra as possibilidades em diagonal.<br>
+				</p>
+				<p style="font-weight: bold;">Boa sorte!</p>
+			</article>
+		</div>
+	</div>
+</body>
+<footer align="center">
+	Images, texts and codes made by Paulo Henrique Rodrigues Grund<br>
+	Copyright &copy 2018
+</footer>
+</html>

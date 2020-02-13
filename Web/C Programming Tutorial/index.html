@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <title>Tutorial de Programação em C</title>
+	<style type="text/css">
+		tab1{
+            padding-left: 17px;
+        }
+        tab2{
+            padding-left: 34px;
+        }
+        h2{
+			text-align: center;
+			color: #404040;
+            margin-top: 20px;
+		}
+		.codigo{
+			background-color: #E0E0E0;
+			color: rgb(238,66,160);
+            border: 2px solid #b4b4b4; 
+            border-radius: 8px;
+            padding: 8px;
+		}
+        .codigogreen{
+            color: rgb(36, 110, 36);
+        }
+		body{
+			color: #A0A0A0;
+		}
+		.ex{
+			color: #ff8080;
+		}
+        .obs{
+            color: red;
+            font-weight: bold;
+        }
+	</style>
+</head>
+<body>
+<div class="container" style="background-color: #F5F5F5">
+    <a name="inicio"><h2>Tutorial de Programação em C</h2></a>
+		<p>
+			<center>Bem vindo ao Tutorial de Programação I Online. Aqui você aprenderá os básicos da programação em C.</center>
+		</p>
+	<h2>Seções do tutorial</h2>
+		<ul>
+			<a href="#comecaraprogramar"><li>Como começar a programar em C</li></a>
+			<a href="#primeirospassos"><li>Primeiros passos</li></a>
+            <a href="#primeiroprograma"><li>Escrevendo seu primeiro programa em C</li></a>
+            <a href="#comentarios"><li>Fazendo comentários no código</li></a>
+            <a href="#variaveis"><li>Variáveis</li></a>
+            <a href="#define"><li>Comando #define</li></a>
+            <a href="#operacoes"><li>Operações Matemáticas</li></a>
+            <a href="#coletandodados"><li>Coletando dados do usuário</li></a>
+            <a href="#ifelse"><li>Comandos if e else</li></a>
+            <a href="#switch"><li>Switch</li></a>
+		</ul>
+	<a name="comecaraprogramar"><h2>Como começar a programar em C</h2></a>
+		<p>
+			Para começar, você deve baixar um programa que escreva e compile em C. O recomendado para esse tutorial é o CodeBlocks, o qual você pode baixar clicando <a href="https://sourceforge.net/projects/codeblocks/files/Binaries/17.12/Windows/codeblocks-17.12mingw-setup.exe/download">aqui</a>.<br>
+		</p>
+	<a name="primeirospassos"><h2>Primeiros Passos</h2></a>
+		<p>
+			Após baixado e instalado, você deverá criar um novo projeto clicando em <b>Create new project</b> e escolhendo a opção <b>Console application</b>.<br>
+			A próxima página você poderá pular. Entre <b>C / C++</b>, escolha <b>C</b>.<br>
+			Em <b>Project title</b>, coloque um nome para seu projeto.<br>
+			Em <b>Folder to create project in</b>, selecione uma pasta para seu programa.<br>
+			Aperte <b>Next</b> e em seguida <b>Finish</b>.<br>
+			Na parte esquerda do projeto clique no <b>+</b> ao lado do nome do seu projeto e vá apertando até aparecer um arquivo chamado <u>main.c</u> que você deverá dar 2 clicks nele para abrir.<br>
+            <img src="imgs/gif1.gif" class="img-fluid">     
+        </p>
+	<a name="primeiroprograma"><h2>Escrevendo seu primeiro programa em C</h2></a>
+        <p>
+            É comum a todo programador começar seu primeiro programa escrevendo <b>Hello World</b>.<br>
+			A estrutura básica de um programa em C é:
+			<div class="container-fluid codigo">
+						<span class="codigogreen">#include &ltstdio.h&gt<br>
+						#include &ltstdlib.h&gt</span><br>
+                        int main()<br>{<br>
+                        <tab1 class="codigogreen">//Aqui deve ficar seu código</tab1><br>return 0;<br>}
+			</div>
+					Você deve escrever todo seu código entre as <b>{}</b> após <b>int main()</b> e antes do <b>return 0;</b><br>
+                    O <b>#include</b> faz incluir uma biblioteca ao código, sendo a primeira <u>stdio.h</u>(Standard Input Output) e a segunda <u>stdlib.h</u>(Standard Library), que fazem os comandos básicos da linguagem C funcionarem.<br><br>
+                    Escreva dentro de <b>int main()</b> um <u>Hello World</u> usando:
+			<div class="container-fluid codigo">
+				printf("Hello World!\n");
+			</div>
+            O <b>\n</b> faz com que uma linha seja pulada na hora de exibir o código.<br>
+            <span style="color:red;font-weight: bold;">Não se esqueça do ponto e vírgula após o final.</span><br>
+            Para compilar seu programa aperte <b>Ctrl-F9</b> e para compilá-lo e executar aperte <b>F9</b><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            <img src="imgs/img1.png" class="img-fluid"><br>
+			O comando <b>printf("");</b> serve para aparecer na tela <u>tudo o que está escrito entre os aspas</u>.
+        </p>
+            <a name="comentarios"><h2>Fazendo comentários no código</h2></a>
+        <p>
+            Você pode escrever comentários para facilitar na hora de ler o código, que não irão aparecer no programa final.
+            <br><br><span class="ex">Ex:</span></p>
+            <div class="codigo">
+                <span class="codigogreen">//Isso é uma anotação de apenas uma linha</span>
+            </div><br>
+            <p><span class="ex">Ex 2:</span>
+            <div class="codigo">
+                <span class="codigogreen">/*<br>Isso é uma anotação<br>que utiliza<br>várias linhas<br>*/</span>
+            </div>
+        </p>
+	<a name="variaveis"><h2>Variáveis</h2></a>
+        <p>
+                Veremos 3 tipos de variáveis:
+				<ul type="square" style="font-weight: bold">
+					<li>int (%i ou %d)</li>
+					<li>float (%f)</li>
+					<li>char (%c)</li>
+				</ul>
+			Há outras variáveis, mas aprenderemos mais tarde.<br>
+			A variável <b>int</b> aceita apenas os números inteiros. <span class="ex">Ex:</span> 7<br>
+            A variável <b>float</b> aceita números quebrados até 32 casas decimais. <span class="ex">Ex:</span> 7,56842135...<br>
+            A variável <b>char</b> aceita apenas caracteres de a-z. <span class="ex">Ex:</span> 'g'<br><br>
+            <span class="ex">Ex:</span></p>
+            <p><div class="codigo">
+                int exemplo1 = 7;<br>
+                float exemplo2 = 7.52;<br>
+                char exemplo3 = 'h';<br>
+                printf("Resultados: \n%i \n%f \n%c", exemplo1, exemplo2, exemplo3);
+            </div><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            <img src="imgs/img4.png" class="img-fluid"></p>
+        
+        <a name="define"><h2>Comando #define</h2></a>
+        <p>
+                O #define funciona de forma semelhante às variáveis. Ele deve ser inserido imediatamente abaixo do último <u>#include</u>.<br>
+                <span class="obs">OBS:</span> caso o número seja quebrado, deverá usar %f para representá-lo, caso use %i, ele irá aparecer como número inteiro.<br><br>
+                <span class="ex">Ex:</span>
+                <div class="codigo">
+                    <div class="codigogreen">
+                        #include &ltstdio.h&gt<br>
+						#include &ltstdlib.h&gt</span><br>
+                        #define PI 3.14<br>
+                    </div>
+                        int main{<br>
+                        <tab1>printf("%f", PI);</tab1><br><br>
+                    return 0;<br>
+                    }
+                </div><br>
+                Após compilar e executar, o código deve aparecer assim:<br>
+                <img src="imgs/img3.png" class="img-fluid"><br>
+                Para aparecer uma certa quantidade de números após a vírgula, use %.6f, trocando o 6 pela quantidade que você quiser mostrar.
+        <a name="operacoes"><h2>Operações Matemáticas</h2></a>
+        <p>
+            Em C você pode realizar facilmente operações matemáticas básicas, como:<br>
+            Adição <b>+</b><br>
+            Subtração <b>-</b><br>
+            Multiplicação <b>*</b><br>
+            Divisão <b>/</b><br>
+            Resto de divisão <b>%</b><br><br>
+            <span class="ex">Ex:</span>
+            <div class="codigo">
+                int x = 10;<br>
+                int y = 2;<br><br>
+                printf("%i\n", x + y); <span class="codigogreen">//Aqui mostrará o resultado 12 (10+2)</span><br>
+                printf("%i\n", x - y); <span class="codigogreen">//Aqui mostrará o resultado 8 (10-2)</span><br>
+                printf("%i\n", x * y); <span class="codigogreen">//Aqui mostrará o resultado 20 (10*2)</span><br>
+                printf("%i\n", x / y); <span class="codigogreen">//Aqui mostrará o resultado 5 (10/2)</span><br>
+                printf("%i\n", x % y); <span class="codigogreen">//Aqui mostrará o resultado 0 (resto de 10/2)</span>
+            </div><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            <img src="imgs/img2.png" class="img-fluid">
+        </p>
+    <a name="coletandodados"><h2>Coletando dados do usuário</h2></a>
+        <p>
+            Você pode coletar o dado de um usuário e inserí-lo em uma variável sem valor definido usando o comando <b>scanf("");</b>.<br><br>
+            <span class="ex">Ex:</span>
+            <div class="codigo">
+                int idade;<br>
+                char sexo;<br><br>
+                printf("Digite sua idade: ");<br>
+                scanf("%i", &idade);<br>
+                printf("Digite seu sexo (M ou F): ");<br>
+                scanf("\n%c", &sexo);<br><br>
+                printf("Idade: %i \nSexo: %c", idade, sexo);
+            </div>
+            <span class="obs">OBS: </span>ao usar o <b>scanf</b> com uma variável do tipo <u>char</u>, você deve colocar o <b>\n</b> antes do <b>%c</b>.<br>
+            Caso não coloque, o programa irá pular a linha do scanf (<a href="contrabarran.html" target="_blank">Exemplo aqui</a>)<br>
+            <span class="obs">OBS: </span>você deve colocar um <b>&</b> (e comercial) antes da variável que você quer inserir o valor do <b>scanf</b>.<br><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            <img src="imgs/img5.png" class="img-fluid">
+        </p>
+    <a name="ifelse"><h2>Comandos if e else</h2></a>
+        <p>
+            Em poucas palavras, o <b>if</b> é um comando de condição, e else é o que acontecerá caso não se encaixe em nenhum <b>if</b>.<br>
+            Para botar vários if, após o 1º use <b>if else</b> ao invés de usar apenas <b>if</b>, o else final continua igual.<br><br>
+            <span class="ex">Ex:</span><br>
+            <div class="codigo">
+                int idade;<br>
+                printf("Digite sua idade: ");<br>
+                scanf("%i", &idade);<br>
+                if(idade == 18) <span class="codigogreen">//Se idade for igual a 18</span><br>
+                <tab1>printf("Voce acaba de entrar na vida adulta");</tab1><br>
+                else if(idade < 18) <span class="codigogreen">//Se idade for menor que 18</span><br>
+                <tab1>printf("Voce e menor de idade");</tab1><br>
+                else <span class="codigogreen">//Se não for nenhuma das opções acima</span><br>
+                <tab1>printf("Voce e maior de idade");</tab1>
+            </div><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            Possibilidade 1 (<b>if</b>):<br>
+            <img src="imgs/img6.png" class="img-fluid"><br>
+            Possibilidade 2 (<b>if else</b>):<br>
+            <img src="imgs/img7.png" class="img-fluid"><br>
+            Possibilidade 3 (<b>else</b>):<br>
+            <img src="imgs/img8.png" class="img-fluid">
+        </p>
+        <p>
+            Caso o <b>IF</b> ou o <b>else</b> dê mais de uma linha, você deverá usar o comando entre <u>chaves</u><br><br>
+            <span class="ex">Ex:</span><br>
+            <div class="codigo">
+                if(idade == 18) <span class="codigogreen">//O if agora são 2 linhas de código (no caso 2 printf)</span><br>{<br>
+                <tab1>printf("Parabens!\n");</tab1><br>
+                <tab1>printf("Agora você pode ser preso!");</tab1><br>
+                }<br>else <span class="codigogreen">//Caso não tenha 18 anos, também com 2 linhas.</span><br>{<br>
+                <tab1>printf("Parabens!\n");</tab1><br>
+                <tab1>printf("Voce nao pode ser preso!");</tab1><br>
+                }
+            </div>
+        </p>
+        <p>
+            Para testar 2 ou mais valores ao mesmo tempo usamos <b>&&</b> ("e") e <b>||</b> ("ou").<br><br>
+            <span class="ex">Ex 1:</span>
+            <div class="codigo">
+                if(peso <= 70 && altura >= 180) <span class="codigogreen">//Caso as duas variáveis procedam, o código procederá.</span><br>
+                <tab1>printf("O que acontecerá");</tab1>
+            </div>
+        </p>
+        <p>
+            <span class="ex">Ex 2:</span>
+            <div class="codigo">
+                if(peso <= 70 || altura >= 180) <span class="codigogreen"> //Caso uma das duas variáveis procedam, o código procederá.</span><br>
+                <tab1>printf("O que acontecerá");</tab1>
+            </div>
+        </p>
+    <a name="switch"><h2>Switch</h2></a>
+        <p>
+            O conceito de switch é bem parecido com o do <b>if</b> e <b>else</b>, porém você só pode para verificar uma informação, não há opção de verificar se é maior ou menor, entre outros. Nesses casos você deve usar o <b>if</b> e <b>else</b>.<br><br>
+            <span class="ex">Ex:</span>
+            <div class="codigo">
+                char vogal;<br>
+                printf("Digite uma vogal: ");<br>
+                scanf("\n%c", &vogal);<br>
+                switch(vogal)<br>{<br>
+                    <tab1>case 'a':</tab1><br>
+                    <tab1>printf("Abacaxi");</tab1><br>
+                    <tab1>break;</tab1><br>
+                    <tab1>case 'e':</tab><br>
+                    <tab1>printf("Escola");</tab><br>
+                    <tab1>break;</tab1><br>
+                    <tab1>default:</tab1><br>
+                    <tab1>printf("Arroz");</tab1><br>}
+            </div>
+            <span class="obs">OBS: </span>você não pode usar o <b>switch</b> quando a variável é <b>float</b>.<br><br>
+            Após compilar e executar, o código deve aparecer assim:<br>
+            Possibilidade 1:<br>
+            <img src="imgs/img9.png" class="img-fluid"><br>
+            Possibilidade 2:<br>
+            <img src="imgs/img10.png" class="img-fluid"><br>
+            Possibilidade 3:<br>
+            <img src="imgs/img11.png" class="img-fluid"><br>
+        </p>
+        <div class="text-center"><a href="#inicio">Voltar ao início</a></div><br>
+</div>
+</body>
+<footer>
+    <div class="text-center">
+        Made by Paulo Henrique Rodrigues Grund & Matheus Marques Botelho<br>
+        Copyright &copy2018
+    </div>
+</footer>
+</html>

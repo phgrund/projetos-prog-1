@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">    
+	<title>CALCULADORA 2.0</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+	<div class="container" align="center">
+		<p style="color: rgb(73, 125, 188);font-size: 30px;font-weight: bold;font-family: monospace;">CALCULADORA 2.0</p>
+		<form name="calculadora">
+			<table width="470x" border="1" bordercolor="#BBB" cellspacing="0" style="border-collapse: collapse;">
+				<tr>
+					<td>
+						Limite: <input type="text" id="numSoma" class="inputSize"><br><br><br><br>
+					</td>
+					<td>
+						<input type="checkbox" id="checkSoma"> Calcular Soma<br><br><br>
+						<input type="button" name="resultadoSoma" value="Ver Resultado" style="float: right" onClick="op1()">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Número: <input type="text" id="numFat" class="inputSize"><br><br><br><br>
+					</td>
+					<td>
+						<input type="checkbox" id="checkFatorial"> Calcular Fatorial<br><br><br>
+						<input type="button" name="resultadoFat" value="Ver Resultado" style="float: right" onClick="op2()">
+					</td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Número A: <input type="text" id="numA" class="inputSize"><br>
+						Número B: <input type="text" id="numB" class="inputSize" style="margin-left: 1px"><br><br><br><br>
+					</td>
+					<td>
+						<input type="checkbox" id="checkCombinacao"> Calcular Combinação<br><br><br><br>
+						<input type="button" name="resultadoCombinacao" value="Ver Resultado" style="float: right" onClick="op3()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+<footer align="center" style="margin-top: 30px">
+	<p style="color: #777">Made by Paulo Henrique Rodrigues Grund<br>
+	Copyright &copy 2018</p>
+</footer>
+</html>

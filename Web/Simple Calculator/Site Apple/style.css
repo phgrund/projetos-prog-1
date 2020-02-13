@@ -1,0 +1,33 @@
+div#site{
+	margin: auto;
+}
+span#titulo{
+	color: #4286f4;
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+table{
+	margin: auto;
+	border-collapse: collapse;
+	border: 1px solid #DDD;
+}
+button#simular1{
+	margin-bottom: 10px;
+}
+span#stylenome{
+	margin-left: 120px;
+}
+span#stylecc{
+	margin-left: 5px;
+}
+span#styleparcelas{
+	margin-left: 66px;
+}
+input#fecharcompra{
+	float: right;
+	margin-right: 4px;
+}
+button{
+	margin-bottom: 5px;	
+}

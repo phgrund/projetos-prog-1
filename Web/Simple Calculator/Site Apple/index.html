@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Apple Store</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+	<div id="site">
+		<center><span id="titulo">My Apple Store</span></center><br>
+		<form>
+			<table border="1px">
+				<tr>
+					<td><img src="imgs/f1.jpg" alt="iMacs R$3.999"></td>
+					<td><img src="imgs/f2.jpg" alt="iPhones R$1.199"></td>
+					<td><img src="imgs/f3.jpg" alt="iPad2 R$1.649"></td>
+					<td><img src="imgs/f4.jpg" alt="iPod R$229"></td>
+				</tr>
+				<tr>
+					<td>
+						Tipo de Usuário: 
+						<select id="select1">
+							<option></option>
+							<option value="dummy">Dummy</option>
+							<option value="normal">Normal</option>
+							<option value="power">Power</option>
+						</select>
+						<br>
+						<p><input type="checkbox" id="check1"> Comprar</p>
+						<center><button onClick="simularCompra(); return false">Simular Pagamento</button></center>
+					</td>
+					<td>
+						Tipo de Usuário: 
+						<select id="select2">
+							<option></option>
+							<option value="dummy">Dummy</option>
+							<option value="normal">Normal</option>
+							<option value="power">Power</option>
+						</select>
+						<br>
+						<p><input type="checkbox" id="check2"> Comprar</p>
+						<center><button onClick="simularCompra(); return false">Simular Pagamento</button></center>
+					</td>
+					<td>
+						Tipo de Usuário: 
+						<select id="select3">
+							<option></option>
+							<option value="dummy">Dummy</option>
+							<option value="normal">Normal</option>
+							<option value="power">Power</option>
+						</select>
+						<br>
+						<p><input type="checkbox" id="check3"> Comprar</p>
+						<center><button onClick="simularCompra(); return false">Simular Pagamento</button></center>
+					</td>
+					<td>
+						Tipo de Usuário: 
+						<select id="select4">
+							<option></option>
+							<option value="dummy">Dummy</option>
+							<option value="normal">Normal</option>
+							<option value="power">Power</option>
+						</select>
+						<br>
+						<p><input type="checkbox" id="check4"> Comprar</p>
+						<center><button onClick="simularCompra(); return false">Simular Pagamento</button></center>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" height="70">
+						<span id="stylenome">Nome: <input type="text" id="nome" placeholder="Ex.: João da Silva"><br>
+						<span id="stylecc">Nº do Cartão de Crédito: <input type="text" id="cc" placeholder="Ex.: 0000 0000 0000 0000"></span><br>
+						<span id="styleparcelas">Nº de Parcelas: 
+						<select id="parcelas">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select></span>
+						<input type="submit" id="fecharcompra" value="Fechar Compra" onClick="comprar();return false">
+					</td>
+				</tr>
+			</table>
+		</form>
+		<p style="text-align: center; color: aqua" id="finalcompra"></p>
+	</div>
+</body>
+</html>
